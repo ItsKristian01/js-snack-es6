@@ -18,11 +18,20 @@ const footballTeams = [
 
 console.log(footballTeams);
 
+const newTeams = [];
+
 for (let i = 0; i < footballTeams.length; i++) {
   const curTeam = footballTeams[i];
   curTeam.falliSubiti = Math.floor(Math.random() * 100);
   curTeam.puntiFatti = Math.floor(Math.random() * 100);
-  
-  console.log(curTeam.falliSubiti, curTeam.puntiFatti);
+
+//   console.log(curTeam.falliSubiti, curTeam.puntiFatti);
+
+  const nome = curTeam.nome;
+  const falli = curTeam.falliSubiti;
+  newTeams.push(nome, falli);
+
+  console.log(nome, falli);
 }
 
+console.log(newTeams);
