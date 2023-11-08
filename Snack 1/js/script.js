@@ -26,13 +26,18 @@ const bicycles = [
 ];
 
 const min = "40kg";
-const max = "120kg";
 
-console.log(bicycles);
+// console.log(bicycles);
 
-for (let i = 0; i < bicycles.length; i++) {
-    const curNumber = bicycles[i];
-    curNumber.weight === min ? console.log(curNumber) : console.log("Non e' la bicicletta con peso minore");
-}
+// for (let i = 0; i < bicycles.length; i++) {
+//     const curNumber = bicycles[i];
+//     curNumber.weight === min ? console.log(curNumber) : console.log("Non e' la bicicletta con peso minore");
+// }
+
+
+bicycles.forEach((curBicycles, index) => {
+    const text = `La bicicletta numero ${index} pesa ${curBicycles.weight} e' quella meno pesante? ${curBicycles.weight === min}`;
+    console.log(text);
+ })
 
 
